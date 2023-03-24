@@ -109,7 +109,8 @@ router
     let obj = getJSONObjectForMovieRequirement(req);
     obj.query = req.query || "No query string";
     //let obj = getJSONObjectForMovieRequirement(req);
-    obj.status = res.status;
+    //obj.status = res.status;
+    obj.status = res.statusCode;
     obj.message = "movie deleted";
     obj.query = req.query || "No query string";
     res.json(obj);
